@@ -21,4 +21,13 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         // 디폴트로 이미지 사이즈로 설정되는데, 그러면 추후 몹을 추가했을 때 너무 잘 부딪히는 느낌이 드므로 원본 이미지보다 약간 작게 설정해주었습니다.
         this.setBodySize(16, 16);
     }
+
+
+
+    move(vector) {
+        let PLAYER_SPEED = 1.5;
+
+        this.x += vector[0] * PLAYER_SPEED;
+        this.y += vector[1] * PLAYER_SPEED;
+    }
 }
