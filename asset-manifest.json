@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/phaser_project/static/css/main.7b75f1c2.css",
-    "main.js": "/phaser_project/static/js/main.7cb379a6.js",
+    "main.js": "/phaser_project/static/js/main.7a36c22e.js",
     "static/js/787.bfcd4567.chunk.js": "/phaser_project/static/js/787.bfcd4567.chunk.js",
     "static/media/spr_external.png": "/phaser_project/static/media/spr_external.a5ed455204655d4a8192.png",
     "static/media/gameClear.ogg": "/phaser_project/static/media/gameClear.d417452c0c664bb24021.ogg",
@@ -21,11 +21,11 @@
     "static/media/font.png": "/phaser_project/static/media/font.07265e74b8c2008766dc.png",
     "index.html": "/phaser_project/index.html",
     "main.7b75f1c2.css.map": "/phaser_project/static/css/main.7b75f1c2.css.map",
-    "main.7cb379a6.js.map": "/phaser_project/static/js/main.7cb379a6.js.map",
+    "main.7a36c22e.js.map": "/phaser_project/static/js/main.7a36c22e.js.map",
     "787.bfcd4567.chunk.js.map": "/phaser_project/static/js/787.bfcd4567.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b75f1c2.css",
-    "static/js/main.7cb379a6.js"
+    "static/js/main.7a36c22e.js"
   ]
 }
