@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import Player from "../characters/Player";
 import {setBackground} from "../utils/backgroundManager";
+import {debugCollide} from "../utils/DebugColideDraw";
 
 export default class PlayingScene extends Phaser.Scene {
     constructor() {
@@ -38,12 +39,41 @@ export default class PlayingScene extends Phaser.Scene {
         // camera가 player를 따라오도록 하여 뱀파이어 서바이벌처럼 player가 가운데 고정되도록 합니다.
         this.cameras.main.startFollow(this.m_player);
 
+        const map = this.make.tilemap({key: 'homeTownInfo'});
+        console.log(map)
+        const tileset = map.addTilesetImage('external', 'externalTiles');
+
+        const ground1 = map.createLayer('ground1', tileset, 0, 0);
+        const ground2 = map.createLayer('ground2', tileset, 0, 0);
+        const ground3 = map.createLayer('ground3', tileset, 0, 0);
+        const building = map.createLayer('building', tileset, 0, 0);
+
+        // 각 타일에 대해 Custom Property를 읽어옵니다.
+        ground1.setCollisionByProperty({colides: true})
+        ground2.setCollisionByProperty({colides: true})
+        ground3.setCollisionByProperty({colides: true})
+        building.setCollisionByProperty({colides: true})
+
+        ground1.setDepth(0);
+        ground2.setDepth(5);
+        ground3.setDepth(10);
+        building.setDepth(15);
+
+        this.physics.add.collider(this.m_player, ground1);
+        this.physics.add.collider(this.m_player, ground2);
+        this.physics.add.collider(this.m_player, ground3);
+        this.physics.add.collider(this.m_player, building);
+
+        debugCollide(ground1, this);
+        debugCollide(ground2, this);
+        debugCollide(ground3, this);
+        debugCollide(building, this);
+
         // PlayingScene의 background를 설정합니다.
         setBackground(this, "homeTown");
 
         // 키보드 키를 m_cursorKeys라는 멤버 변수로 추가해줍니다.
         this.m_cursorKeys = this.input.keyboard.createCursorKeys();
-
 
     }
 
@@ -125,6 +155,26 @@ export default class PlayingScene extends Phaser.Scene {
         this.movePlayerManager();
         this.m_background.tilePositionX = this.cameras.main.scrollX * 1.5;  // 0.3은 배경이 움직이는 속도입니다.
         this.m_background.tilePositionY = this.cameras.main.scrollY * 1.5;
+
+         // 마지막 프레임에서 이전 동작을 중지합니다.
+         this.m_player.body.setVelocity(0);
+
+         // 수평 이동
+         if (this.m_cursorKeys.left.isDown) {
+           this.m_player.body.setVelocityX(-1);
+         } else if (this.m_cursorKeys.right.isDown) {
+           this.m_player.body.setVelocityX(1);
+         }
+
+         // 수직 이동
+         if (this.m_cursorKeys.up.isDown) {
+           this.m_player.body.setVelocityY(-1);
+         } else if (this.m_cursorKeys.down.isDown) {
+           this.m_player.body.setVelocityY(1);
+         }
+
+         // 플레이어가 대각선을 따라 더 빨리 움직일 수 없도록 속도를 정규화하고 스케일링합니다.
+        this.m_player.body.velocity.normalize().scale(1.5);
     }
 
 

@@ -2,8 +2,8 @@ import Phaser from "phaser";
 import fontPng from "../../assets/font/font.png";
 import fontXml from "../../assets/font/font.xml";
 
-import hometownImg from "../../assets/images/original/background/town/homeTown.png";
-
+import externalTiles from "../../assets/images/original/background/tiles/spr_external.png";
+import hometownInfo from '../../assets/images/original/background/town/homeTown.json';
 import playerImg from "../../assets/spritesheets/original/character/player/player.png";
 
 import beamOgg from "../../assets/sounds/beam.ogg";
@@ -26,8 +26,10 @@ export default class LoadingScene extends Phaser.Scene {
     }
 
     preload() {
-        // IMAGES
-        this.load.image("homeTown", hometownImg);
+        // BackGround Image Load
+        this.load.image("externalTiles", externalTiles);
+        this.load.tilemapTiledJSON("homeTownInfo", hometownInfo);
+
 
         // My SpriteSheet
         this.load.spritesheet("player", playerImg, {

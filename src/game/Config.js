@@ -15,6 +15,7 @@ const Config = {
     pixelArt: true,
     physics: {
         default: "arcade",
+        gravity: { y: 0 }, // Top down game, so no gravity
         arcade: {
             debug: process.env.DEBUG === "true",
         },
