@@ -64,11 +64,6 @@ export default class PlayingScene extends Phaser.Scene {
         this.physics.add.collider(this.m_player, ground3);
         this.physics.add.collider(this.m_player, building);
 
-        debugCollide(ground1, this);
-        debugCollide(ground2, this);
-        debugCollide(ground3, this);
-        debugCollide(building, this);
-
         // PlayingScene의 background를 설정합니다.
         setBackground(this, "homeTown");
 
