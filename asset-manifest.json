@@ -1,15 +1,31 @@
 {
   "files": {
-    "main.css": "/phaser_project/static/css/main.073c9b0a.css",
-    "main.js": "/phaser_project/static/js/main.fd7d28a9.js",
+    "main.css": "/phaser_project/static/css/main.7b75f1c2.css",
+    "main.js": "/phaser_project/static/js/main.7cb379a6.js",
     "static/js/787.bfcd4567.chunk.js": "/phaser_project/static/js/787.bfcd4567.chunk.js",
+    "static/media/spr_external.png": "/phaser_project/static/media/spr_external.a5ed455204655d4a8192.png",
+    "static/media/gameClear.ogg": "/phaser_project/static/media/gameClear.d417452c0c664bb24021.ogg",
+    "static/media/growl.ogg": "/phaser_project/static/media/growl.ef066ee7491c4935a4c1.ogg",
+    "static/media/gameover.ogg": "/phaser_project/static/media/gameover.c5a6daceb6bd161e249f.ogg",
+    "static/media/explosion.ogg": "/phaser_project/static/media/explosion.e0e3e45d3a4b38570aaa.ogg",
+    "static/media/hitMob.ogg": "/phaser_project/static/media/hitMob.5402ad0a9af125e280c9.ogg",
+    "static/media/pauseIn.ogg": "/phaser_project/static/media/pauseIn.709318866d0f4f27d98d.ogg",
+    "static/media/font.xml": "/phaser_project/static/media/font.4bcd205baed8f3b96edb.xml",
+    "static/media/nextLevel.ogg": "/phaser_project/static/media/nextLevel.9a559c71fbc7718126e4.ogg",
+    "static/media/beam.ogg": "/phaser_project/static/media/beam.06039637f5ef896f0d8d.ogg",
+    "static/media/hurt.ogg": "/phaser_project/static/media/hurt.4cf237ccf711a82c2380.ogg",
+    "static/media/pauseOut.ogg": "/phaser_project/static/media/pauseOut.4ff85c91bf860bb3da7e.ogg",
+    "static/media/expUp.ogg": "/phaser_project/static/media/expUp.19bbb42b1db0fe329aad.ogg",
+    "static/media/scratch.ogg": "/phaser_project/static/media/scratch.f4832aaadaccc53ce358.ogg",
+    "static/media/player.png": "/phaser_project/static/media/player.0d437cacf95b23322ce2.png",
+    "static/media/font.png": "/phaser_project/static/media/font.07265e74b8c2008766dc.png",
     "index.html": "/phaser_project/index.html",
-    "main.073c9b0a.css.map": "/phaser_project/static/css/main.073c9b0a.css.map",
-    "main.fd7d28a9.js.map": "/phaser_project/static/js/main.fd7d28a9.js.map",
+    "main.7b75f1c2.css.map": "/phaser_project/static/css/main.7b75f1c2.css.map",
+    "main.7cb379a6.js.map": "/phaser_project/static/js/main.7cb379a6.js.map",
     "787.bfcd4567.chunk.js.map": "/phaser_project/static/js/787.bfcd4567.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.fd7d28a9.js"
+    "static/css/main.7b75f1c2.css",
+    "static/js/main.7cb379a6.js"
   ]
 }
